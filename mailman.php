@@ -13,6 +13,19 @@ function list_lists( $member ) {
     }
 }
 
+# Returns an array of all the members of a list
+function list_members( $list ) {
+    $members = `sudo /usr/lib/mailman/bin/list_members $list`;
+    if ( $members != '' ) {
+        $members = trim( $members );
+        $members = preg_split('/\s+/', $members);
+        return $members;
+    }
+    else {
+        return array();
+    }
+}
+
 # Returns an array of all the lists that the given member is in
 function find_member( $member ) {
     $lists = `sudo /usr/lib/mailman/bin/find_member $member | grep -v 'found in'`;
