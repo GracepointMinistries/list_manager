@@ -1,5 +1,10 @@
 <?php
 
+# Returns list of list names that the given member is in.
+#
+# query params:
+#  - member: email address to find (e.g., john.doe@abc.com)
+
 require_once('mailman.php');
 require_once('JSON.php');
 
