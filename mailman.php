@@ -23,4 +23,9 @@ function remove_member( $email, $list ) {
     $error = `sudo /usr/lib/mailman/bin/remove_members -f - $list <<< $email`;
     return !$error;
 }
+
+# Removes an email from all lists. Returns a boolean representing success or failure.
+function remove_member_from_all_lists( $email ) {
+    return `sudo /usr/lib/mailman/bin/remove_members -f - --fromall <<< $email`;
+}
 ?>
