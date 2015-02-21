@@ -17,4 +17,10 @@ function find_member( $member ) {
 function add_member( $email, $list ) {
     return `sudo /usr/lib/mailman/bin/add_members -r - --admin-notify=y $list <<< $email | grep "Already a member:\|Subscribed:"`;
 }
+
+# Removes an email from a list. Returns a boolean representing success or failure.
+function remove_member( $email, $list ) {
+    $error = `sudo /usr/lib/mailman/bin/remove_members -f - $list <<< $email`;
+    return !$error;
+}
 ?>
