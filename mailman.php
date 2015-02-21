@@ -1,6 +1,19 @@
 <?php
 
-# Returns an array of all the liss that the given member is in
+# Returns an array of all the lists
+function list_lists( $member ) {
+    $lists = `sudo /usr/lib/mailman/bin/list_lists -b`;
+    if ( $lists != '' ) {
+        $lists = trim( $lists );
+        $lists = preg_split('/\s+/', $lists);
+        return $lists;
+    }
+    else {
+        return array();
+    }
+}
+
+# Returns an array of all the lists that the given member is in
 function find_member( $member ) {
     $lists = `sudo /usr/lib/mailman/bin/find_member $member | grep -v 'found in'`;
     if ( $lists != '' ) {
