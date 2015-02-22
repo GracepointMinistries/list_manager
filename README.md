@@ -75,10 +75,11 @@ Returns a list of the names of all lists that a given member is in.
 
 ```
 ["my_list2", "my_list3"]
+```
 
 ## remove_member_from_all_lists.php
 
-Removes the  from all lists.
+Removes the member from all lists.
 
 ### Required parameters
 
