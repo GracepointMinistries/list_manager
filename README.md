@@ -7,6 +7,12 @@ All requests are expected to be GET and response are returned as JSON.
 
 For the most part, the names of the API correspond to the names of the [Mailman commandline utilities](http://wiki.list.org/DOC/4.09%20Summary%20of%20the%20mailman%20bin%20commands).
 
+# Configuration
+
+You'll need to create a `config.php` file that defines `MAILMAN_CMD_PREFIX`, which is typically the path to the actual mailman commandline tools. This constant is prepended to mailman commands like `list_lists`.
+
+You can copy `config.php.template` to get started with your own `config.php` file.
+
 # API
 
 ## list_lists.php
