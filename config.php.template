@@ -1,0 +1,3 @@
+<?php
+define('MAILMAN_CMD_PREFIX', '/usr/lib/mailman/bin/')
+?>
