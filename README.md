@@ -35,7 +35,7 @@ Returns a list of list names that the given member is in.
 
 ### Required parameters
 
-`list` - name of list
+- `list` - name of list
 
 ### Sample response
 
@@ -49,8 +49,8 @@ Adds a member to a list
 
 ### Required parameters
 
-`member` - email of member to add
-`list` - name of list
+- `member` - email of member to add
+- `list` - name of list
 
 ### Sample response
 
@@ -62,8 +62,8 @@ Removes a member from a list
 
 ### Required parameters
 
-`member` - email of member to remove
-`list` - name of list
+- `member` - email of member to remove
+- `list` - name of list
 
 ### Sample response
 
@@ -75,7 +75,7 @@ Returns a list of the names of all lists that a given member is in.
 
 ### Required parameters
 
-`member` - email of member to look for
+- `member` - email of member to look for
 
 ### Sample response
 
@@ -89,7 +89,7 @@ Removes the member from all lists.
 
 ### Required parameters
 
-`member` - email of member to look for
+- `member` - email of member to look for
 
 ### Sample response
 
